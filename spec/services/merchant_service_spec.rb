@@ -1,4 +1,4 @@
-require "rails_helper"
+require "rails_helper"# requires rails_engine app running console (https://github.com/lambo1986/rails_engine_be)
 
 RSpec.describe MerchantService do# 1
   describe ".all_merchants" do

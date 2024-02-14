@@ -1,4 +1,4 @@
-class MerchantService# 1
+class MerchantService# 1 # requires rails_engine app running console (https://github.com/lambo1986/rails_engine_be)
   BASE_URL = "http://localhost:3000"
 
   def all_merchants#1
