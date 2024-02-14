@@ -6,6 +6,11 @@ class MerchantService# 1
     merchant_hash[:data]
   end
 
+  def merchant_items(merchant_id)
+    items_for_merchant = get_url("/api/v1/merchants/#{merchant_id}/items")
+    items_for_merchant[:data]
+  end
+
   private
 
   def get_url(path)#1

@@ -18,5 +18,7 @@ RSpec.describe "merchant index", type: :feature do
 
     expect(current_path).to eq("/merchants/1")
     expect(page).to have_content("Schroeder-Jerde")
+    expect(page).to have_content("Items for Schroeder-Jerde:")
+    expect(page).to have_content("Item Nemo Facere")
   end
 end
