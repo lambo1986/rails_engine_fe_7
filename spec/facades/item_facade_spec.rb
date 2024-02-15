@@ -18,5 +18,12 @@ RSpec.describe ItemFacade, vcr: true do
       expect(items_facade.item(179).name).to be_a String
       expect(items_facade.item(179).unit_price).to be_a Float
     end
+
+    it "has a . find_all_by_min_price method" do
+      items = ItemFacade.new.find_all_by_min_price(999)
+
+      expect(items).to be_an Array
+      expect(items.first).to be_an Item
+    end
   end
 end

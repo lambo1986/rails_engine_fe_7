@@ -13,4 +13,11 @@ RSpec.describe ItemService, vcr: true do
 
     expect(item[:attributes][:name]).to be_a String
   end
+
+  it "has a .item_by_min_price(min_price) method" do
+    items = ItemService.new.items_by_min_price(999)
+
+    expect(items).to be_a(Array)
+    expect(items.first[:attributes][:name]).to be_a String
+  end
 end

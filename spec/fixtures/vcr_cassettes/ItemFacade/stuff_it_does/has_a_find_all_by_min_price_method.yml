@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/items/find_all?min_price=999
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"14ae8ffaecd642e26f5783913599a533"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 69d59436-7f5d-43f4-8b32-cf546c281430
+      X-Runtime:
+      - '0.020600'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=4.94, instantiation.active_record;dur=0.22,
+        process_action.action_controller;dur=7.70
+      Content-Length:
+      - '845'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1063","type":"item","attributes":{"name":"Item Et Dolorem","description":"Quo
+        aut architecto eum suscipit. Cumque blanditiis aut beatae recusandae. Dolores
+        ut accusantium deleniti.","unit_price":999.54,"merchant_id":47}},{"id":"1708","type":"item","attributes":{"name":"Item
+        Eos Similique","description":"Minima ex voluptatem provident voluptatem sapiente
+        reiciendis adipisci. Eius nihil neque. Architecto omnis sunt voluptatem ratione
+        dignissimos fuga. Sint tenetur maiores sapiente eos placeat. Sit sed perspiciatis.","unit_price":999.94,"merchant_id":69}},{"id":"1711","type":"item","attributes":{"name":"Item
+        Quaerat Expedita","description":"Sed consequatur in atque odit ex quae perspiciatis.
+        Ut aut quos. Reiciendis rem excepturi ex explicabo dolore. Aliquam deserunt
+        sed voluptas.","unit_price":999.88,"merchant_id":70}}]}'
+  recorded_at: Thu, 15 Feb 2024 16:37:12 GMT
+recorded_with: VCR 6.2.0
