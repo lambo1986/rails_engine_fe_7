@@ -9,7 +9,7 @@ RSpec.describe "merchant index", vcr: true, type: :feature do
 
   it "lists all merchants" do
     visit merchants_path
-
+save_and_open_page
     expect(page).to have_content("Merchants")
     expect(page).to have_content("Schroeder-Jerde")
   end
