@@ -19,12 +19,20 @@ RSpec.describe MerchantFacade, vcr: true do
       expect(merchant_items.count).to eq(42)
     end
 
-    it "can find just one merchant" do
+    it "can find just one merchant by id" do
       merchant = MerchantFacade.new.merchant(43)
 
       expect(merchant).to be_a(Merchant)
       expect(merchant.id).to be_a(String)
       expect(merchant.name).to be_a(String)
+    end
+
+    it "find a merchant by name" do
+      merchant = MerchantFacade.new.merchant_by_name("Schroeder-Jerde")
+
+      expect(merchant).to be_a(Merchant)
+      expect(merchant.name).to eq("Schroeder-Jerde")
+      expect(merchant.id).to be_a(String)
     end
   end
 end

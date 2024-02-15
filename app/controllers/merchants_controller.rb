@@ -9,9 +9,9 @@ class MerchantsController < ApplicationController
     @merchant_items = MerchantFacade.new.merchant_items(@merchant.id)
   end
 
-  def find_all
+  def find
     search = params[:search]
-    @merchants = MerchantFacade.new.merchant_by_name(search)
+    @merchant = MerchantFacade.new.merchant_by_name(search)
     render :index
   end
 end

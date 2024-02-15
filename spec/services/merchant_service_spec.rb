@@ -31,4 +31,13 @@ RSpec.describe MerchantService, vcr: true do# 1
       expect(merchant[:type]).to be_a String
     end
   end
+
+  describe ".find_merchant_by_name(merchant_name)" do
+    it "returns a single merchant by name from a search" do
+      merchant = MerchantService.new.find_merchant_by_name("Schroeder-Jerde")
+
+      expect(merchant[:attributes][:name]).to be_a String
+      expect(merchant[:type]).to be_a String
+    end
+  end
 end

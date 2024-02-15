@@ -40,9 +40,9 @@ RSpec.describe "merchant index", vcr: true, type: :feature do
     fill_in "search", with: "Schroeder-Jerde"
     click_button "Search"
 
-    expect(current_path).to eq("/merchants/find_all")
+    expect(current_path).to eq("/merchants/find")
     expect(page).to have_content("Matches for Schroeder-Jerde:")
-    expect(page).to have_content("Schroeder-Jerde")
+    expect(page).to have_link("Schroeder-Jerde")
     expect(page).to have_link("All Merchants")
 
     click_link "All Merchants"

@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/merchants/43
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"3dddb27ffe0467ec6445f62f4a7d3667"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 96ce03dc-60e3-42e8-8c50-2b853f3b3ccc
+      X-Runtime:
+      - '0.030304'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=11.78,
+        instantiation.active_record;dur=0.13, process_action.action_controller;dur=15.86
+      Content-Length:
+      - '88'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"43","type":"merchant","attributes":{"name":"Marks, Shanahan
+        and Bauch"}}}'
+  recorded_at: Thu, 15 Feb 2024 15:24:47 GMT
+recorded_with: VCR 6.2.0

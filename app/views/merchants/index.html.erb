@@ -2,7 +2,7 @@
 
 <h3>Search For a Merchant By Name:</h3>
 
-<%= form_with url: find_all_merchants_path, method: :get, local: true do |form| %>
+<%= form_with url: find_merchants_path, method: :get, local: true do |form| %>
   <%= form.label :search, "Merchant Name:" %>
   <%= form.text_field :search %>
   <%= form.submit 'Search' %>
@@ -11,10 +11,13 @@
 <% if params[:search].present? %>
   <h3><%= link_to "All Merchants", merchants_path %>
   <h2>Matches for <%= params[:search] %>:</h2>
-<% end %>
+  <h3><%= link_to @merchant.name, merchant_path(@merchant) %></h3>
 
-<% @merchants.each do |merchant| %>
-  <ul>
-    <li><%= link_to merchant.name, "/merchants/#{merchant.id}" %></li>
-  </ul>
+<% else %>
+
+  <% @merchants.each do |merchant| %>
+    <ul>
+      <li><%= link_to merchant.name, "/merchants/#{merchant.id}" %></li>
+    </ul>
+  <% end %>
 <% end %>
