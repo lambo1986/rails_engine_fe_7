@@ -51,7 +51,7 @@ RSpec.describe "merchant index", vcr: true, type: :feature do
 
     fill_in "search", with: "Schro"
     click_button "Search"
-save_and_open_page
+
     expect(current_path).to eq("/merchants/find")
     expect(page).to have_content("Matches for Schro")
     expect(page).to have_link("Schroeder-Jerde")
