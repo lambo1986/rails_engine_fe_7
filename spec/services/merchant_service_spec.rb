@@ -1,6 +1,6 @@
 require "rails_helper"# requires rails_engine app running console (https://github.com/lambo1986/rails_engine_be)
 
-RSpec.describe MerchantService do# 1
+RSpec.describe MerchantService, vcr: true do# 1
   describe ".all_merchants" do
     it "returns all merchants" do#1
       merchants = MerchantService.new.all_merchants

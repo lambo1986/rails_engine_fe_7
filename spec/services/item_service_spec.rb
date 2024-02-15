@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe ItemService do
+RSpec.describe ItemService, vcr: true do
   it "has a .all_items method" do
     items = ItemService.new.all_items
 

@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/items/179
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e20580432f5bd14796fb93598a977f6c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cf418a0e-1a90-4e0a-9b21-3374942c5923
+      X-Runtime:
+      - '0.003888'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.15, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=0.75
+      Content-Length:
+      - '328'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"179","type":"item","attributes":{"name":"Item Qui Veritatis","description":"Totam
+        labore quia harum dicta eum consequatur qui. Corporis inventore consequatur.
+        Illum facilis tempora nihil placeat rerum sint est. Placeat ut aut. Eligendi
+        perspiciatis unde eum sapiente velit.","unit_price":906.17,"merchant_id":9}}}'
+  recorded_at: Thu, 15 Feb 2024 01:24:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/items/179
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e20580432f5bd14796fb93598a977f6c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f7109145-9cd8-4d85-a9a7-b97497be79f2
+      X-Runtime:
+      - '0.003418'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.15, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.65
+      Content-Length:
+      - '328'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"179","type":"item","attributes":{"name":"Item Qui Veritatis","description":"Totam
+        labore quia harum dicta eum consequatur qui. Corporis inventore consequatur.
+        Illum facilis tempora nihil placeat rerum sint est. Placeat ut aut. Eligendi
+        perspiciatis unde eum sapiente velit.","unit_price":906.17,"merchant_id":9}}}'
+  recorded_at: Thu, 15 Feb 2024 01:24:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/items/179
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e20580432f5bd14796fb93598a977f6c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 351295f0-2c2c-4fe3-a397-49d4109a8e6d
+      X-Runtime:
+      - '0.004712'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.22
+      Content-Length:
+      - '328'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"179","type":"item","attributes":{"name":"Item Qui Veritatis","description":"Totam
+        labore quia harum dicta eum consequatur qui. Corporis inventore consequatur.
+        Illum facilis tempora nihil placeat rerum sint est. Placeat ut aut. Eligendi
+        perspiciatis unde eum sapiente velit.","unit_price":906.17,"merchant_id":9}}}'
+  recorded_at: Thu, 15 Feb 2024 01:24:10 GMT
+recorded_with: VCR 6.2.0

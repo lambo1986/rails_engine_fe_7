@@ -1,12 +1,12 @@
 require "rails_helper"
 
-RSpec.describe "merchant index", type: :feature do
+RSpec.describe "merchant index", vcr: true, type: :feature do
   it "is the root path" do
     visit root_path
 
     expect(page).to have_content("Merchants")
   end
-  
+
   it "lists all merchants" do
     visit merchants_path
 

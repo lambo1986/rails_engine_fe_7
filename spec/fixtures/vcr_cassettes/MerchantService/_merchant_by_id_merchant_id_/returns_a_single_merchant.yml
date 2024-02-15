@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/merchants/99
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"ad4cfbe2d8ef6d5c6f08188ea86caafd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 74d4e4b7-8d44-4dd6-9a08-c255834092ee
+      X-Runtime:
+      - '0.003816'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.17, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=0.68
+      Content-Length:
+      - '79'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"99","type":"merchant","attributes":{"name":"Fahey-Stiedemann"}}}'
+  recorded_at: Thu, 15 Feb 2024 01:24:10 GMT
+recorded_with: VCR 6.2.0

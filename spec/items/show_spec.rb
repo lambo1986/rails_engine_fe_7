@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "item show page", type: :feature do
+RSpec.describe "item show page", vcr: true, type: :feature do
   it "shows an items attributes" do
     visit items_path
 

@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe MerchantFacade do
+RSpec.describe MerchantFacade, vcr: true do
   describe "what it do" do
     it "gives birth to baby merchant facades" do
       merchants_facade = MerchantFacade.new

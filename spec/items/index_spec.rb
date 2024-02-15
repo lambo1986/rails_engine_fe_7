@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "items index", type: :feature do
+RSpec.describe "items index", vcr: true, type: :feature do
   it "renders a list of items by name and each name is a link to their show" do
     visit items_path
 

@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe ItemFacade do
+RSpec.describe ItemFacade, vcr: true do
   describe "stuff it does" do
     it "makes item facade stuffs via .items" do
       items_facade = ItemFacade.new
