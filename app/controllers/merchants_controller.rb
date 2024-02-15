@@ -10,8 +10,7 @@ class MerchantsController < ApplicationController
   end
 
   def find
-    search = params[:search]
-    @merchant = MerchantFacade.new.merchant_by_name(search)
+    @merchant = MerchantFacade.new.merchant_by_name(params[:search])
     render :index
   end
 end
