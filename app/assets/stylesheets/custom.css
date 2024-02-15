@@ -1,0 +1,22 @@
+.page1 {
+  background-image: url('item1.jpg');
+}
+
+.page2 {
+  background-image: url('item2.jpg');
+}
+
+.page3 {
+  background-image: url('merchant1.jpg');
+}
+
+.page4 {
+  background-image: url('merchant2.jpg');
+}
+
+/* Common styles for all backgrounds */
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
