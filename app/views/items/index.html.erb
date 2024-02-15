@@ -1,7 +1,29 @@
 <h1>Items</h1>
 
-<% @items.each do |item| %>
-  <ul>
-    <%= link_to item.name, "items/#{item.id}" %>
-  </ul>
+<h2>Search by Minimum Price:</h2>
+
+<%= form_with url: find_all_items_path, method: :get, local: true do |form| %>
+  <%= form.label :search, "Item Minumum Price:" %>
+  <%= form.text_field :search %>
+  <%= form.submit 'Search' %>
+<% end %>
+
+<% if params[:search].present? %>
+
+  <h3><%= link_to "All Items", items_path %>
+  <h2>Matches for <%= params[:search] %>:</h2>
+  <% @search_items.each do |item| %>
+    <ul>
+      <li><%= link_to item.name, items_path(item) %></li>
+      <li><%= item.unit_price %></li>
+    </ul>
+  <%end%>
+
+<% else %>
+
+  <% @items.each do |item| %>
+    <ul>
+      <li><%= link_to item.name, "items/#{item.id}" %></li>
+    </ul>
+  <% end %>
 <% end %>

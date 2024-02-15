@@ -11,6 +11,11 @@ class ItemService
     item[:data]
   end
 
+  def items_by_min_price(price)
+    items = get_url("/api/v1/items/find_all?min_price=#{price}")
+    items[:data]
+  end
+
   private
 
   def get_url(path)
