@@ -28,4 +28,25 @@ RSpec.describe "merchant index", vcr: true, type: :feature do
     expect(page).to have_content("Item Nemo Facere")
   end
 
+  it "has a search box" do
+    visit root_path
+
+    expect(page).to have_content("Merchants")
+    expect(page).to have_content("Schroeder-Jerde")
+    expect(page).to have_content("Search For a Merchant By Name:")
+    expect(page).to have_field("search")
+    expect(page).to have_button("Search")
+
+    fill_in "search", with: "Schroeder-Jerde"
+    click_button "Search"
+
+    expect(current_path).to eq("/merchants/find_all")
+    expect(page).to have_content("Matches for Schroeder-Jerde:")
+    expect(page).to have_content("Schroeder-Jerde")
+    expect(page).to have_link("All Merchants")
+
+    click_link "All Merchants"
+
+    expect(current_path).to eq(merchants_path)
+  end
 end

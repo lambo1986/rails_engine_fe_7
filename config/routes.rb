@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
   root to: "merchants#index"
-  resources :merchants, only: [:index, :show]
+  resources :merchants, only: [:index, :show] do
+    get 'find_all', on: :collection
+  end
   resources :items, only: [:index, :show]
 end

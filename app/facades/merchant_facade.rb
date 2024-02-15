@@ -21,4 +21,12 @@ class MerchantFacade
     call = service.merchant_by_id(merchant_id)
     merchant = Merchant.new(call)
   end
+
+  def merchant_by_name(search_term)
+    service = MerchantService.new
+    call = service.find_merchant(search_term)
+    merchants = call.map do |merchant|
+      Merchant.new(call)
+    end
+  end
 end
