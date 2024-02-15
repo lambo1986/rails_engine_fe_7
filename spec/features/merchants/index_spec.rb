@@ -28,7 +28,7 @@ RSpec.describe "merchant index", vcr: true, type: :feature do
     expect(page).to have_content("Item Nemo Facere")
   end
 
-  it "has a search box" do
+  it "has a search box that can find a merchant by name, even if incomplete" do
     visit root_path
 
     expect(page).to have_content("Merchants")
@@ -48,5 +48,13 @@ RSpec.describe "merchant index", vcr: true, type: :feature do
     click_link "All Merchants"
 
     expect(current_path).to eq(merchants_path)
+
+    fill_in "search", with: "Schro"
+    click_button "Search"
+
+    expect(current_path).to eq("/merchants/find")
+    expect(page).to have_content("Matches for Schro")
+    expect(page).to have_link("Schroeder-Jerde")
+    expect(page).to have_link("All Merchants")
   end
 end
