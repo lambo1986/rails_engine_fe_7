@@ -22,4 +22,13 @@ RSpec.describe MerchantService do# 1
       expect(items.first[:attributes][:merchant_id]).to be_an Integer
     end
   end
+
+  describe ".merchant_by_id(merchant_id)" do
+    it "returns a single merchant" do
+      merchant = MerchantService.new.merchant_by_id(99)
+
+      expect(merchant[:attributes][:name]).to be_a String
+      expect(merchant[:type]).to be_a String
+    end
+  end
 end

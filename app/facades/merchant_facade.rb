@@ -15,4 +15,10 @@ class MerchantFacade
       Item.new(merchant_item)
     end
   end
+
+  def merchant(merchant_id)
+    service = MerchantService.new
+    call = service.merchant_by_id(merchant_id)
+    @merchant = Merchant.new(call)
+  end
 end

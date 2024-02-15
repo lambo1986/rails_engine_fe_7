@@ -11,6 +11,11 @@ class MerchantService# 1 # requires rails_engine app running console (https://gi
     items_for_merchant[:data]
   end
 
+  def merchant_by_id(merchant_id)
+    merchant = get_url("/api/v1/merchants/#{merchant_id}")
+    merchant[:data]
+  end
+
   private
 
   def get_url(path)#1
